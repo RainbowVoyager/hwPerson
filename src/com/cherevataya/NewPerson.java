@@ -43,18 +43,13 @@ public class NewPerson {
             weight = RANDOM.nextDouble() * (26 - MIN_WEIGHT) + MIN_WEIGHT;
         } else if (age < 14) {
             height = RANDOM.nextInt(100) + 60;
-            weight = RANDOM.nextDouble() * (50 - 20) + 20;
+            weight = RANDOM.nextDouble() * (80 - 20) + 20;
+        } else if (age < 99) {
+            height = RANDOM.nextInt(100) + 60;
+            weight = RANDOM.nextDouble() * (90 - 20) + 20;
         }
 
         return new Person(firstName, lastName, age, round(weight, 2), height);
-    }
-
-    private static int generateRandomHeight(int from, int to) {
-        return 0;
-    }
-
-    private static double generateRandomWeight(double from, double to) {
-        return 0;
     }
 
     private static double round(double value, int places) {
